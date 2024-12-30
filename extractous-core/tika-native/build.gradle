@@ -74,8 +74,6 @@ graalvmNative {
             // The --no-fallback option to native-image causes the utility to fail if it can not create the image.
             fallback = false
 
-            configurationFileDirectories.from(file("src/main/resources/META-INF/$group/$version"))
-
             buildArgs.addAll(
                     "-H:+AddAllCharsets", // Very important to get UTF8 working
                     "--enable-https", // Very important https working
